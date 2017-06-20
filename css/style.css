@@ -66,7 +66,19 @@
 		top: 0;
 		width: 100%;
 	}
+	
+/* left */
 
+	#left{
+		width: 22%;
+		height: 95.833333%;
+		position: absolute;
+		top: 2.0833333%;
+		left: 0;
+		background: rgba(126,43,203,.4);
+		
+		
+	}
 /* BG */
 
 	#bg {
