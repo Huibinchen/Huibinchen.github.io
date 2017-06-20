@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html,body,div{
+            width:100%;
+            height:100%;
+        }
+        div{
+            display: flex;
+
+        }
+        canvas{
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <canvas id="canvas" width="600" height="600"></canvas>
+</div>
+<script>
+    function draw() {
+        var canvas = document.getElementById("canvas");
+        if(!canvas.getContext) return;
+        var cxt = canvas.getContext("2d");
+        drawHands(cxt);
+        //绘制全部表针并让其动起来
+        function drawHands(cxt) {
+            var p = Math.PI;
+            requestAnimationFrame(function step() {
+                var date = new Date();
+                cxt.clearRect(0,0,600,600);//清除帧
+                drawBoard(cxt);
+                drawPoint(cxt);
+                var secondDeg = p / 30 * date.getSeconds();
+                var minuteDeg = p / 30 * date.getMinutes() + secondDeg / 60;
+                var hourDeg = p / 6 * date.getHours() + minuteDeg / 12;
+                drawHand(6,"black",150,hourDeg,cxt);//时
+                drawHand(4,"black",200,minuteDeg,cxt);//分
+                drawHand(2,"red",240,secondDeg,cxt);//秒
+                requestAnimationFrame(step);
+            });
+        }
+
+//        绘制表针上的点数
+        function drawPoint(cxt) {
+            var p = Math.PI;
+            cxt.save();
+            cxt.translate(300,300);
+            cxt.rotate(-p / 2);
+            cxt.beginPath();
+            for(var i = 1; i < 13; i++){
+                cxt.save();
+                cxt.rotate( i * p / 6);
+                cxt.beginPath();
+                cxt.fillText(i,220,0);
+                cxt.font = "40px sans-serif";
+                cxt.restore();
+            }
+            cxt.restore();
+        }
+        //绘制指定样式的表针
+        function drawHand(width,color,length,deg,cxt) {
+            var p= Math.PI;
+            cxt.save();
+            cxt.translate(300,300);
+            cxt.rotate(-p / 2 + deg);
+            cxt.beginPath();
+            cxt.moveTo(-10,0);
+            cxt.lineTo(length,0);
+            cxt.lineWidth = width;
+            cxt.strokeStyle = color;
+            cxt.lineCap = "round"
+            cxt.stroke();
+            cxt.restore();
+        }
+        //绘制表盘
+        function drawBoard(cxt) {
+            var p = Math.PI;
+            cxt.save();
+            cxt.translate(300,300);
+            cxt.beginPath();
+            cxt.arc(0,0,300,0,2 * p);
+            cxt.stroke();
+            for(var i = 0; i < 60; i++){
+                cxt.save();
+                if(i % 5 == 0){
+                    cxt.strokeStyle = "red";
+                    cxt.lineWidth = 5;
+                    cxt.lineCap = "round";
+                }
+                cxt.rotate(- p / 2 + i * p / 30);
+                cxt.beginPath();
+                cxt.moveTo(240,0);
+                cxt.lineTo(290,0);
+                cxt.stroke();
+                cxt.restore();
+            }
+            cxt.restore();
+
+        }
+    }
+    draw();
+</script>
+</body>
+</html>
