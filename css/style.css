@@ -71,14 +71,14 @@
 
 	#left{
 		width: 22%;
-		height: 95.833333%;
+		height: 100%;
 		position: absolute;
-		top: 2.0833333%;
+		top: 0;
 		left: 0;
 		background: rgba(126,43,203,.4);
-		
-		
+		animation: 3s, all,;
 	}
+	
 /* BG */
 
 	#bg {
