@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"  href="bootstrap.min.css">
+    <style>
+        .table-self{
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<div class="container">
+    <h1>{{arr.user}}待办事项
+        <span class="label label-default" ng-class="{true:'label-warning',false:'label-success'}[count()>2]">{{count()}}</span>
+    </h1>
+    <hr>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="添加任务" ng-model="todo">
+        <span class="input-group-btn">
+	        <button class="btn btn-default btn-success" type="button" ng-click="add()">添加</button>
+	      </span>
+    </div>
+    <table class="table table-striped table-self">
+        <tr>
+            <th>详细内容</th>
+            <th>是否完成</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="item in arr.items | filter : myFilter" >
+            <td>{{item.action}}</td>
+            <td><input type="checkbox" ng-model="item.done" ></td>
+            <td>{{item.done==false?'待完成':'完成'}}</td>
+            <td class="btn btn-default"  ng-click="del(item)">删除</td>
+        </tr>
+    </table>
+</div>
+</body>
+<script src="angular.min.js"></script>
+<script>
+    var myApp = angular.module("myApp",[]);
+    myApp.controller('myCtrl',['$scope',function ($scope) {
+        $scope.arr = {
+            user:'伍涛',
+            items:[{action:"买牙膏",done:false},
+                {action:"给张三发邮件",done:false},
+                {action:"给李四打电话",done:true},
+                {action:"还信用卡",done:false}]
+        }
+        $scope.todo = '';
+        $scope.add = function () {
+            var obj = {
+                action : $scope.todo,
+                done : false
+            }
+            $scope.arr.items.push(obj);
+            $scope.todo = ""
+        }
+        $scope.count = function () {
+            return $scope.arr.items.filter(item=>!item.done).length
+        }
+        $scope.del = function (item) {
+//            console.log(index,$scope.arr.items)
+            var items = $scope.arr.items
+            items.splice(items.indexOf(item),1)
+        }
+        $scope.myFilter = function (obj) {
+            return !obj.done
+        }
+    }])
+</script>
+</html>
