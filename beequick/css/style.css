@@ -1,0 +1,69 @@
+html, body, div, span, object, iframe,
+h1,  h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b,  dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: inherit;
+    font-style: normal;
+    vertical-align: baseline;
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+/* HTML5 RESETS FOR OLDER BROWSERS */
+article, aside, figure, figure img, hgroup, footer, header, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title-addrname:after{
+    content: "▼";
+    font-size: 1.2rem;
+}
+#nav{
+    width:100%;
+    height:5rem;
+    position: fixed;
+    bottom:0;
+    left:0;
+    background: rgba(246,246,246,.95);
+    z-index:20;
+}
+.navs-item{
+    float: left;
+    float: left;
+    position: relative;
+    font-size: 1.2rem;
+    color: #777;
+    text-align: center;
+    background: no-repeat center .6rem;
+    background-size: auto 2rem;
+    padding-top: 3rem;
+}
+.navs-item-home{
+    background-image: url("../img/1.png");
+}
+.navs-item-menu{
+    background-image: url("../img/2.png");
+}
+.navs-item-cart{
+    background-image: url("../img/3.png");
+}
+.navs-item-mine{
+    background-image: url("../img/4.png");
+}

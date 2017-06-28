@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet"  href="css/style.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            font-size: 24px;
+        }
+        header{
+            width:100%;
+            height: 4.5rem;
+            background: #ffd600;
+            text-align: center;
+            line-height: 4.5rem;
+            font-size: 1.4rem;
+            position: fixed;
+            top:0;
+            left:0;
+            z-index: 20;
+            opacity:.8;
+        }
+        #contaier{
+            width:100%;
+            height:100%;
+            padding-top: 4.5rem;
+        }
+        .swiper-container {
+            width: 100%;
+        }
+        .swiper-slide img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<div id="wrap">
+    <header>
+        <span class="title-addrname">大家好广场</span>
+    </header>
+    <div id="contaier">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" ng-repeat="item in slide">
+                    <img src="{{item.activity.img}}" alt="">
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    <div id="nav">
+        <ul id="mod-navs" class="mod-navs theme-spline-top" style="display: block;">
+            <li class="navs-item navs-item-home navs-current" data-key="home" style="width:25%;">
+                <div class="navs-bubble"></div>首页
+            </li>
+            <li class="navs-item navs-item-menu " data-key="menu" style="width:25%;">
+                <div class="navs-bubble"></div>闪送超市
+            </li>
+            <li class="navs-item navs-item-cart " data-key="cart" style="width:25%;">
+                <div class="navs-bubble" style="display: none;"></div>购物车
+            </li>
+            <li class="navs-item navs-item-mine " data-key="mine" style="width:25%;">
+                <div class="navs-bubble"></div>我的
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script src="js/angular.min.js"></script>
+<script src="js/swiper-3.4.2.min.js"></script>
+<script src="js/bee.js"></script>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        // direction: 'vertical',
+        loop: true,
+        autoplay:2000,
+        autoplayDisableOnInteraction:false,
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+        // 如果需要前进后退按钮
+        nextButton: '.swiper-button-next',
+        observer:true
+    })
+    var app = angular.module("myApp",[]);
+    app.controller("myCtrl",['$scope','$http',function ($scope,$http) {
+        $scope.slide = [];
+        $http.get("http://h5.yztctech.net/api/axf/apihome.php").success(function (data){
+            $scope.slide = data.data.slide
+        })
+    }])
+</script>
+</html>
