@@ -3,16 +3,15 @@
         <!--左侧导航-->
         <div class="categories-wrap scroller">
             <ul class="categories">
-                <li ng-repeat="item in btnList" ng-click="changeCategoriesIndex($index)">
-                    <span ng-class="{true:'active'}[activeCategoriesIndex==$index]">{{item}}</span>
+                <li ng-repeat="item in categories" ng-click="changeCategoriesIndex(item.id)"><span ng-class="{true:'active'}[activeCategoriesId==item.id]">{{item.name}}</span>
                 </li>
             </ul>
         </div>
         <!--右侧内容区域-->
         <div class="productList-wrap scroller">
             <ul class="productList">
-                <li class="productList-meta" ng-repeat="item in categoriesItems">
-                    <div class="product-image ">
+                <li class="productList-meta"  ng-repeat="item in products[activeCategoriesId] | filterProduct: key: orderObj">
+                    <div class="product-image">
                         <img src="{{item.img}}" alt="">
                     </div>
                     <div class="product-meta-wrap">
@@ -44,11 +43,7 @@
                 </ul>
                 <div class="filter-items" ng-show="allCategories||ranking">
                     <ul>
-                        <li>综合排序</li>
-                        <li>销量最高</li>
-                        <li>价格最高</li>
-                        <li>价格最低</li>
-                        <li>牛奶蛋糕</li>
+                        <li id="filter_id" ng-repeat="item in filterItems" ng-click="filterProduct(item)">{{item.name}}</li>
                     </ul>
                 </div>
             </div>
@@ -146,10 +141,12 @@
         padding-bottom: 1rem;
         background-color: rgba(255,255,255,1);
     }
-    .filter-items>ul>li{
+    .filter-items>ul>li#filter_id{
         font-size: 1.2rem;
         color: #777;
         float: left;
+        display: inline-block;
+        width:auto;
         border:.1rem solid #e0e0e0;
         padding: .4rem .8rem;
         margin-left: .8rem;
@@ -182,6 +179,7 @@
     }
     .productList-meta .product-image{
         width:8rem;
+        height:8rem;
     }
     .product-image img{
         width:100%;
@@ -192,6 +190,10 @@
     }
     .product-item-title{
         color:#232b33;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-right: 1rem;
     }
     .product-meta-wrap{
         position: absolute;

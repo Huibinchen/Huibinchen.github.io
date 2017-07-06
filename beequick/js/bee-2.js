@@ -43,7 +43,7 @@ angular.module("myApp",["ngRoute"]).config(["$routeProvider",function ($routePro
             controller : 'HomeCtrl'
         })
         .when('/menu',{
-            templateUrl:'./views/menu-2.html',
+            templateUrl:'./views/menu.html',
             controller : 'MenuCtrl'
         })
         .when('/car',{
@@ -62,6 +62,17 @@ angular.module("myApp",["ngRoute"]).config(["$routeProvider",function ($routePro
         })
 
     }])
+// 当angular初始化完成会运行run
+//     .run(["$rootScope","$location","car",function ($rootScope,$location,car){
+//         // 控制初始的激活导航
+//         if ($location.path() == "/"){
+//             $rootScope.navActiveIndex = 0
+//         }else if($location.path().indexOf("/menu")!=-1){
+//             $rootScope.navActiveIndex = 1
+//         }else if ($location.path().indexOf("/car")!=-1){
+//             $rootScope.navActiveIndex = 2
+//         }
+//     }])
     .controller("HomeCtrl",['$scope','$http',function ($scope,$http) {
         $scope.slide = [];
         $scope.menu = [];
@@ -158,11 +169,44 @@ angular.module("myApp",["ngRoute"]).config(["$routeProvider",function ($routePro
             $scope.ranking = !$scope.ranking
             $scope.filterItems = $scope.rankings
         }
+        // 过滤器
+        $scope.filterItem = function (item){
+
+            if ($scope.key == "全部分类"){
+                return true
+            }else{
+                return item.cids[item.child_cid] == $scope.key
+            }
+        }
 
         $scope.filterProduct = function (item) {
-            if(allCategories){
-
+            if($scope.allCategories){
+                // 过滤
+                $scope.key = item.name
+            }else{
+                // 排序
+                switch(item.name) {
+                    case "综合排序":
+                        $scope.orderObj = {
+                            order: '',
+                            orderBol: false
+                        }
+                        break
+                    case "价格最低":
+                        $scope.orderObj = {
+                            order: 'price',
+                            orderBol: false
+                        }
+                        break
+                    case "价格最高":
+                        $scope.orderObj = {
+                            order: 'price',
+                            orderBol: true
+                        }
+                        break
+                }
             }
+
         }
         // 初始获取热销榜的数据
         function getData(){
@@ -200,13 +244,47 @@ angular.module("myApp",["ngRoute"]).config(["$routeProvider",function ($routePro
             }
         }
     }])
+    .filter("filterProduct",["$filter",function ($filter){
 
+        // arr: 要过滤的数组
+        // key: 过滤的关键字
+        // orderObj: 排序的对象
+        // 	order: 排序的关键字
+        // 	orderBol: 升序还是降序
+        return function (arr,key,orderObj){
 
+            // 判断arr是否有内容对price进行转换
+            if (arr){
+                for (var i=0; i<arr.length; i++){
+                    arr[i].price = parseFloat(arr[i].price)
+                }
+            }
+            var result = []
+            // 过滤
+            if (key != "全部分类"){
+                // 过滤
+                for (var i=0; i<arr.length; i++){
+                    if (arr[i].cids[arr[i].child_cid] == key){
+                        result.push(arr[i])
+                    }
+                }
+            }else{
+                result = arr
+            }
+            // 排序
+            if (orderObj.order == ""){
+                return result
+            }else{
+                if (orderObj.orderBol){
 
-    // 当angular初始化完成会运行run
-    .run(["$rootScope",function ($rootScope){
-        $rootScope.navActiveIndex = 0
+                    return $filter("orderBy")(result,"price",true)
+                }else{
+                    return $filter("orderBy")(result,"price",false)
+                }
+            }
+        }
     }])
-    .controller("MineCtrl",['$scope','$http',function ($scope,$http) {
 
-    }])
+
+
+
