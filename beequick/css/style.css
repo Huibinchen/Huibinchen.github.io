@@ -46,7 +46,6 @@ a {
 }
 .navs-item{
     float: left;
-    float: left;
     position: relative;
     font-size: 1.2rem;
     color: #777;
@@ -66,4 +65,13 @@ a {
 }
 .navs-item-mine{
     background-image: url("../img/4.png");
+}
+.acts-icon{
+    width:100%;
+    margin:1rem 0;
+    /*padding: 3%;*/
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
 }

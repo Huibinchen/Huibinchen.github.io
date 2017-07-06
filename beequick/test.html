@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<div class="acts-brand">
+    <a href="###" ng-repeat="item in product">
+        <img src="{{item.img}}" alt="">
+    </a>
+</div>
+</body>
+<script src="js/angular.min.js"></script>
+<script>
+    var app = angular.module("myApp",[]);
+    app.controller("myCtrl",['$scope','$http',function ($scope,$http) {
+        $scope.product = [];
+
+        $http.get("http://h5.yztctech.net/api/axf/apimiaosha.php").success(function (data){
+            $scope.product = data.product.filter((item,index)=>index<=2);
+        })
+    }])
+</script>
+</html>

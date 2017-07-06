@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/styletwo.css">
+</head>
+<body ng-app="myApp" >
+<div class="container">
+    <header >
+        <div class="header-content">
+            <span>大家好广场</span>
+        </div>
+        <span class="search">搜索</span>
+    </header>
+    <div ng-view></div>
+    <nav>
+            <ul id="mod-navs" class="mod-navs theme-spline-top" style="display: block;">
+                <a href="#/">
+                    <li class="navs-item navs-item-home navs-current" data-key="home" style="width:25%;" ng-class="{true:'active'}[navActiveIndex==0]">
+                    首页
+                    </li>
+                </a>
+                <a href="#/menu">
+                    <li class="navs-item navs-item-menu " data-key="menu" style="width:25%;"  ng-class="{true:'active'}[navActiveIndex==1]">
+                    闪送超市
+                    </li>
+                </a>
+                <a href="#/car">
+                    <li class="navs-item navs-item-cart " data-key="cart" style="width:25%;"  ng-class="{true:'active'}[navActiveIndex==2]">
+                    购物车
+                    </li>
+                </a>
+                <a href="#/mine">
+                    <li class="navs-item navs-item-mine " data-key="mine" style="width:25%;"  ng-class="{true:'active'}[navActiveIndex==3]">
+                    我的
+                    </li>
+                </a>
+            </ul>
+    </nav>
+</div>
+</body>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-route.js"></script>
+<script type="text/javascript" src="js/swiper-3.4.2.min.js"></script>
+<script type="text/javascript" src="js/bee-2.js"></script>
+</html>

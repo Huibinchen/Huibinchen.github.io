@@ -1,0 +1,198 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+ol,ul {
+    list-style: none;
+}
+caption,th {
+    text-align: left;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+a{
+    text-decoration: none;
+}
+
+/*以上为初始化*/
+/*这是主页面的样式 ----- 开始*/
+html{
+    font-size: 10px;
+}
+.container{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: #e5e5e5;
+    margin-top: 4.5rem;
+}
+header{
+    width:100%;
+    height:4.5rem;
+    background: #ffd600;
+    position: fixed;
+    top: 0;
+    z-index:20;
+}
+.header-content{
+    position: absolute;
+    left:6rem;
+    right:6rem;
+    text-align: center;
+    height:4.5rem;
+}
+.header-content span{
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+}
+.header-content span:after{
+    content:'▼';
+}
+.search{
+    width: 6rem;
+    height: 4.4rem;
+    position: absolute;
+    right:.6rem;
+    background: url("../img/serach.png") no-repeat;
+    -webkit-background-size:auto 2.5rem;
+    background-size:auto 2rem;
+    background-position: right .5rem;
+    line-height: 7rem;
+    text-align: right;
+}
+nav{
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    height: 5rem;
+    background: #fff;
+}
+.navs-item{
+    width:25%;
+    float: left;
+    height:100%;
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 1.2rem;
+    color: #777;
+    position: relative;
+    background: no-repeat center .6rem;
+    background-size: auto 2rem;
+    padding-top: 3rem;
+}
+.navs-item-home{
+    background-image: url("../img/home.png");
+}
+.navs-item-home.active{
+    background-image: url("../img/home-active.png");
+}
+.navs-item-menu{
+    background-image: url("../img/current.png");
+}
+.navs-item-menu.active{
+    background-image: url("../img/current-active.png");
+}
+.navs-item-cart{
+    background-image: url("../img/3.png");
+}
+.navs-item-cart.active{
+    background-image: url("../img/3-active.png");
+}
+.navs-item-mine{
+    background-image: url("../img/4.png");
+}
+.navs-item-mine.active{
+     background-image: url("../img/4-active.png");
+ }
+@-webkit-keyframes navs{
+    /*20%, 40%, 60%, 80%, 0%, 100%{
+        -webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);
+        animation-timing-function:cubic-bezier(.215,.61,.355,1);
+    }*/
+    0%{
+        -webkit-background-size: auto .6rem;
+        background-size: auto .6rem;
+    }
+    20%{
+        -webkit-background-size: auto 2.2rem;
+        background-size: auto 2.2rem;
+    }
+    40%{
+        -webkit-background-size: auto 1.8rem;
+        background-size: auto 1.8rem;
+    }
+    60%{
+        -webkit-background-size: auto 2.06rem;
+        background-size: auto 2.06rem;
+    }
+    80%{
+        -webkit-background-size: auto 1.94rem;
+        background-size: auto 1.94rem;
+    }
+    100%{
+        -webkit-background-size: auto 2rem;
+        background-size: auto 2rem;
+    }
+}
+@keyframes navs{
+    /*20%, 40%, 60%, 80%, 0%, 100%{
+        -webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);
+        animation-timing-function:cubic-bezier(.215,.61,.355,1);
+    }*/
+    0%{
+        -webkit-background-size: auto .6rem;
+        background-size: auto .6rem;
+    }
+    20%{
+        -webkit-background-size: auto 2.2rem;
+        background-size: auto 2.2rem;
+    }
+    40%{
+        -webkit-background-size: auto 1.8rem;
+        background-size: auto 1.8rem;
+    }
+    60%{
+        -webkit-background-size: auto 2.06rem;
+        background-size: auto 2.06rem;
+    }
+    80%{
+        -webkit-background-size: auto 1.94rem;
+        background-size: auto 1.94rem;
+    }
+    100%{
+        -webkit-background-size: auto 2rem;
+        background-size: auto 2rem;
+    }
+}
+
+nav>ul>a>li.active{
+    -webkit-animation: navs 1s;
+    animation: navs 1s;
+}
+
+
+
+/*这是主页面的样式 ----- 结束*/
+

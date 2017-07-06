@@ -1,0 +1,239 @@
+<main>
+    <div class="userinfo tap-action">
+        <div class="user">
+            <p class="user-phone">13380336344</p>
+            <p class="user-level theme-redfont">V7</p>
+        </div>
+        <span class="user-mas"></span>
+    </div>
+    <div class="favorite">
+        <div class="item goodsFavorite tap-action">
+            <span class="item-inner">商品收藏<span>
+            </span></span>
+        </div>
+        <div class="split"></div>
+        <div class="item shopFavorite tap-action">
+            <span class="item-inner">店铺收藏</span>
+        </div>
+    </div>
+    <div class="mine-content scroller">
+        <div class="mine-order">
+            <div class="theme-spline">
+                我的订单
+                <span >查看全部订单</span>
+            </div>
+            <ul class="order-types">
+                <li class="order-type order-type-11 tap-action">待付款</li>
+                <li class="order-type order-type-12 tap-action">待收货</li>
+                <li class="order-type order-type-13 tap-action">待评价</li>
+                <li class="order-type order-type-14 tap-action">退款/售后</li>
+                <li class="clear"></li>
+            </ul>
+        </div>
+        <div class="mine-end">
+            <ul class="mine-lis">
+                <li class="pointsShop">积分商城</li>
+                <li class="coupon">优惠券</li>
+                <li class="addrlist">收货地址</li>
+                <li class="aftersale">客服/反馈</li>
+                <li class="about">关于我们</li>
+            </ul>
+        </div>
+        <div class="logout">退出当前帐号</div>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</main>
+<style>
+    header{
+        display: none;
+    }
+    main{
+        position: absolute;
+        top: -4.5rem;
+        width:100%;
+        height:100%;
+    }
+    .userinfo{
+        width:100%;
+        background: #ffd600;
+        height: 10rem;
+        position: fixed;
+        top:0;
+        z-index:20;
+    }
+    .user{
+        height:6rem;
+        padding:2rem 0rem 0rem 9rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #fff;
+        background:url("img/user-img.png") 1.5rem bottom no-repeat;
+        background-size: auto 6rem;
+    }
+    .user-phone{
+        line-height: 1rem;
+        margin: .7rem 0;
+    }
+    .user-level{
+        line-height: 2.8rem;
+        background: url("img/user-lev.png")no-repeat;
+        background-position: left center;
+        background-size: auto 100%;
+        padding-left: 2.9rem;
+        font-size: 1rem;
+        color: #e64f1a;
+    }
+    .user-mas{
+        position: absolute;
+        width: 1.1rem;
+        height: 1.9rem;
+        top: 5rem;
+        right: 2rem;
+        background: url("img/user.png") no-repeat;
+        background-size: 100% 100%;
+    }
+    .favorite{
+        background: #f3c800;
+        height:3.5rem;
+        width:100%;
+        color: #fff;
+        font-size: 1.2rem;
+        display: flex;
+        text-align: center;
+        line-height: 3.5rem;
+        position: fixed;
+        top:10rem;
+        left:0;
+        z-index:20;
+    }
+    .favorite .item{
+        width:50%;
+        height:100%;
+        justify-content: space-around;
+    }
+    .goodsFavorite .item-inner{
+        background: url("img/data1.png") no-repeat;
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: auto 1.8rem;
+    }
+    .shopFavorite .item-inner{
+        background: url("img/data2.png") no-repeat;
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: auto 1.8rem;
+    }
+    .item-inner{
+        display: inline-block;
+        padding-left: 3rem;
+    }
+    .split{
+        width: .1rem;
+        height: 60%;
+        background: #fff;
+        align-self: center;
+    }
+    
+    .mine-content{
+        width:100%;
+        position: absolute;
+        top:13.5rem;
+    }
+    .mine-order{
+        background: #fff;
+        margin-bottom: 1rem;
+    }
+    .theme-spline{
+        border-bottom:.1rem solid #e0e0e0;
+        padding:1.4rem 1.5rem;
+        background: url("img/user2.png") no-repeat;
+        padding-right: 2.5rem;
+        background-position: right center;
+        background-size: auto 1rem;
+        font-size: 1.4rem;
+    }
+    .theme-spline span{
+        float: right;
+        color: #999;
+        font-size: 1.4rem;
+    }
+    .order-types{
+        background: #fff;
+    }
+    .order-type{
+        position: relative;
+        width:25%;
+        float: left;
+        padding-top: 13%;
+        text-align: center;
+        line-height: 3rem;
+        font-size: 1.2rem;
+        height:100%;
+    }
+    .order-type-11{
+        background: url("img/order1.png") no-repeat center 40%;
+        background-size: auto 25%;
+    }
+    .order-type-12{
+        background: url("img/order2.png") no-repeat center 40%;
+        background-size: auto 25%;
+    }
+    .order-type-13{
+        background: url("img/order3.png") no-repeat center 40%;
+        background-size: auto 25%;
+    }
+    .order-type-14{
+        background: url("img/order4.png") no-repeat center 40%;
+        background-size: auto 25%;
+    }
+    .clear{
+        clear: both;
+    }
+    .mine-end{
+        background: #fff;
+        margin-bottom: 1rem;
+        overflow: hidden;
+    }
+    .mine-lis>li{
+        position: relative;
+        width:25%;
+        float: left;
+        padding:6rem 0 2rem;
+        text-align: center;
+        line-height: 2rem;
+        font-size: 1.2rem;
+        height:100%;
+    }
+    .pointsShop{
+        background: url("img/order5.png") no-repeat center 40%;
+        background-size: auto 25%;
+    }
+    .coupon{
+        background: url("img/order6.png") no-repeat center 40%;
+        background-size: auto 25%;
+    }
+    .addrlist{
+        background: url("img/order7.png") no-repeat center 40%;
+        background-size: auto 25%;
+    }
+    .aftersale{
+        background: url("img/order8.png") no-repeat center 40%;
+        background-size: auto 25%;
+    }
+    .about{
+        background: url("img/order9.png") no-repeat center 40%;
+        background-size: auto 25%;
+    }
+    .logout{
+        background-color: #fff;
+        height: 4.5rem;
+        line-height: 4.5rem;
+        text-align: center;
+        margin: 3rem 0 1rem;
+        font-size: 1.4rem;
+        color: #333;
+    }
+</style>
