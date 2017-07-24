@@ -1,0 +1,747 @@
+/*----------------------------------------清除默认样式开始----------------------------------------*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font-weight: inherit;
+	font-style: normal;
+	vertical-align: baseline;
+	background: transparent;
+	border: 0;
+	outline: 0;
+	list-style: none;
+}
+article, aside, figure, figure img, hgroup, footer, header, nav, section {
+	display: block;
+}
+a{
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/*----------------------------------------清除默认样式结束----------------------------------------*/
+
+
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  font-family: Tahoma, 微软雅黑, "Microsoft Yahei", "hiragino sans gb", Helvetica, Arial, 宋体, 	sans-serif;
+}
+/*--------------------------------------------头部导航条样式---------------------------------------*/
+
+html,body {
+	width:100%;
+	height: 100%;
+	background: #f3f5f7;
+	font-size: 12px;
+}
+ul,li{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.topbar{
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	/*overflow: hidden;*/
+	z-index: 299;
+  background: #000;
+}
+.fl{
+	float: left;
+}
+.logo{
+	display: block;
+	width: 242px;
+	height: 49px;
+	margin: 0px 0px 0px -51px;
+	text-indent: -999px;                       /*首行文本的缩进  把logo 里的文本脱离可视区域  但又能让搜索引擎找到*/
+	background: url("../img/logo.png") no-repeat;
+
+}
+.topbar .content{
+	max-width: 1560px;
+  min-width: 982px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.menus{
+	text-align: center;
+	line-height: 50px;
+	font-size: 14px;
+}
+.topbar .shopgif {
+    background: url("../img/shop2.gif") no-repeat;
+}
+.menu{
+	float: left;
+	margin: 0px 6px;
+}
+.topbar .link {
+	display: block;
+	padding: 0 12px 0 13px;
+	line-height: 50px;
+	color: #ccc;
+	font-size: 14px;
+	cursor: pointer;
+	overflow: hidden;
+}
+.topbar b {
+	width: 7px;
+	height: 4px;
+	cursor: pointer;
+	margin: 23px 0 0 3px;
+	font-size: 0;
+	background: url("../img/topbar_sprite.png") no-repeat -223px -18px;
+	position: relative;
+}
+
+/*----------------------------------------右侧-------------------------------------*/
+.fr{
+	float: right;
+}
+.login {
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+	margin-left: 15px;
+}
+.login a {
+	color: #ccc;
+}
+.login .loginBtn {
+	padding-right: 15px;
+	margin-right: 11px;
+	border-right: 1px solid #666;
+}
+.topbar .menu {
+	float: left;
+	margin: 0 6px;
+}
+.topbar .appIcon {
+	background: url("../img/app.png") no-repeat;
+	width: 21px;
+	height: 33px;
+	margin-top: 17px;
+}
+.topbar .hoverhandler {
+	position: relative;
+	cursor: pointer;
+}
+.dropdownmenu{
+	position: absolute;
+	top: 50px;
+	left: 0;
+	width: 80px;
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	background: #222;
+	z-index: 299;
+}
+.topbar .dropdownmenu li {
+	height: 0;
+	overflow: hidden;
+	-webkit-transition: height .25s ease .1s;
+	-moz-transition: height .25s ease .1s;
+	-o-transition: height .25s ease .1s;
+	-ms-transition: height .25s ease .1s;
+	transition: height .25s ease .1s;
+}
+
+/*------------------------------------hover---------------------------------------*/
+li.hoverhandler:hover{
+	background-color: #222;
+}
+.topbar .link:hover {
+	color: #cf9;
+	background-color: #222;
+}
+.topbar li.hoverhandler:hover .dropdownmenu ,.topbar li.hoverhandler.hover .dropdownmenu{
+	opacity: 1;
+	height: auto;
+}
+.topbar .hoverhandler:hover .dropdownmenu li{
+	height: 36px;
+}
+.topbar .dropdownmenu>li>a:hover {
+	color: #fff;
+	background: #5a840a;
+}
+.appBox .link:hover .appIcon {
+	background: url("../img/app_hover.png") no-repeat;
+}
+.topbar .menu:hover b, .topbar .menu.hover b, .topbar .user:hover b, .topbar .user.hover b {
+    background-position: -231px -18px;
+}
+.topbar .uploadBtn:hover {
+    background: url("../img/upload_hover.png") 7px 6px no-repeat;
+}
+.vip .vipBtn:hover {
+    background: url("../img/vip_hover.png") 6px 6px no-repeat;
+}
+.login a:hover {
+    color: #cf9;
+}
+.topbar .dropdownmenu>li>a:hover {
+    color: #fff;
+    background: #5a840a;
+}
+/*------------------------------------hover--------------------------------------*/
+
+.topbar .dropdownmenu a {
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    color: #ccc;
+    padding-left: 9px;
+    font-size: 14px;
+    text-align: left;
+}
+.topbar .upload{
+	margin-right: 15px;
+}
+.topbar .uploadBtn {
+	background: url("../img/topbar_icon.png") no-repeat 0 -33px;
+	display: block;
+	width: 25px;
+	height: 25px;
+	margin-top: 11px;
+}
+.topbar .vip{
+	margin-right: 20px;
+}
+.vip .vipBtn {
+	background: url("../img/topbar_icon.png") no-repeat -33px -33px;
+	display: block;
+	width: 33px;
+	height: 25px;
+	margin-top: 13px;
+}
+.topbar .search{
+	margin-right: 30px;
+}
+.topbar .search {
+	position: relative;
+	z-index: 299;
+	width: 215px;
+	height: 29px;
+	margin: 10px auto 0;
+	margin-right: 30px;
+}
+.topbar .left_park_side, .topbar .right_park_side {
+	position: absolute;
+	z-index: 291;
+	left: 0;
+	top: 0;
+	width: 15px;
+	height: 29px;
+	background: url("../img/topbar_sprite.png") no-repeat;
+}
+.topbar .right_park_side {
+	left: auto;
+	right: 0;
+	background-position: -208px 0;
+}
+.topbar .searchbody {
+	position: absolute;
+	z-index: 291;
+	top: 0;
+	left: 15px;
+	width: 185px;
+	height: 29px;
+	background: url("../img/topbar_sprite.png") no-repeat -15px 0;
+}
+.topbar .search input {
+	margin-top: 7px;
+	width: 170px;
+	color: #898989;
+	background-color: transparent;
+}
+.topbar .search button {
+	position: absolute;
+	z-index: 291;
+	top: 6px;
+	right: 13px;
+	width: 16px;
+	height: 17px;
+	text-indent: -999em;
+	cursor: pointer;
+	border: 0 none;
+	background: url("../img/topbar_sprite.png") no-repeat -223px -1px;
+}
+
+input,button{
+	outline: none;
+	border: 0;
+}
+
+/*---------------------------------------------媒体查询----------------------------------*/
+
+@media screen and (max-width: 1273px) {
+	.topbar .menu {
+		margin: 0px;
+	}
+	.topbar .upload{
+		margin-right: 10px;
+	}
+	.topbar .vip{
+		margin-right: 10px;
+	}
+	.topbar .search{
+		margin-right: 10px;
+	}
+	.menus .menu_folk{
+		display: none;
+	}
+}
+@media screen and (max-width:479px){
+	
+}
+/*--------------------------------------------头部导航条样式---------------------------------------*/
+
+/*----------------------------------------底部页脚样式---------------------------------------------*/
+.footer {
+    margin: 30px auto 0;
+    min-width: 1000px;
+    height: 150px;
+    color: #999;
+    line-height: 22px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 12px;
+}
+.footer {
+    margin-top: 4px;
+}
+.footer_link {
+    font-size: 14px;
+    padding: 35px 0 20px;
+    color: #666;
+}
+.footer_link a {
+    color: #666;
+}
+.ico_line {
+    width: 2px;
+    height: 10px;
+    margin: 0 8px;
+    display: inline-block;
+    overflow: hidden;
+    background: url("../img/ico_index.png") no-repeat -70px 0;
+}
+.footer_copy a {
+    color: #999;
+}
+/*----------------------------------------底部页脚样式---------------------------------------------*/
+
+
+
+
+/*--------------------------------------------轮播图---------------------------------------------*/
+
+.slideContent {
+    position: relative;
+    min-width: 1020px;
+    max-width: 1600px;
+    height: 480px;
+    margin: 50px auto 0;
+}
+.slideContent li{
+    height: 480px;
+    /*filter: alpha(opacity=0);*/
+    position: absolute;
+    left: 0;
+    right: 0;
+    /*background: url("../img/2.jpg") no-repeat;*/
+    opacity: 1;
+    z-index: 0;
+}
+.slideContent li:nth-child(1){
+    background: url("../img/1.jpg") no-repeat;
+}
+.slideContent li:nth-child(2){
+    background: url("../img/02.jpg") no-repeat;
+}
+.slideContent li:nth-child(3){
+    background: url("../img/03.jpg") no-repeat;
+}
+.slideContent li:nth-child(4){
+    background: url("../img/04.jpg") no-repeat;
+}
+.slideContent li:nth-child(5){
+    background: url("../img/05.jpg") no-repeat;
+}
+.slideContent li:nth-child(6){
+    background: url("../img/06.jpg") no-repeat;
+}
+.slideContent li:nth-child(7){
+    background: url("../img/07.jpg") no-repeat;
+}
+.slideContent li:nth-child(8){
+    background: url("../img/08.jpg") no-repeat;
+}
+.slideContent li:nth-child(9){
+    background: url("../img/09.jpg") no-repeat;
+}
+.slideContent li:nth-child(10){
+    background: url("../img/10.jpg") no-repeat;
+}
+.slideContent li{
+	transition: opacity 1s;
+    -webkit-transition: opacity 1s; 
+}
+.autoBox {
+    width: 1220px;
+    margin: 0 auto;
+    position: relative;
+}
+.bannerTitleBox{
+	position: absolute;
+	top: 29px;
+	right: 0;
+	background: url("../img/bannerTitleBox.png") no-repeat;
+    width: 258px;
+    height: 390px;
+    padding-top: 14px;
+    text-align: center;
+    z-index: 2;
+}
+.slideTitle {
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    width: 230px;
+    line-height: 34px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+    cursor: pointer;
+}
+.slideTitle:hover{
+	color: #52e2c0;;
+}
+
+@media screen and (max-width:1273px){
+	.autoBox {
+	    width: 970px;
+	}
+}
+/*--------------------------------------------轮播图---------------------------------------------*/
+
+
+
+
+/*--------------------------------------------页面内容---------------------------------------------*/
+.index_content{
+    max-width: 1600px;
+    margin: 0 auto;
+    background: #fff;
+}
+.index_box_outer {
+    border-bottom: 4px solid #f3f5f7;
+}
+.index_box {
+    width: 1220px;
+    margin: 0 auto;
+    position: relative;
+}
+.titleBox {
+    padding: 34px 0 16px;
+    overflow: hidden;
+}
+.titleBox h3 {
+    font-size: 20px;
+    color: #000;
+    float: left;
+    line-height: 20px;
+    font-weight: bold;
+}
+.titleBox ul {
+    float: right;
+}
+.titleBox ul li:first-child {
+    background: none;
+}
+.titleBox ul li {
+    float: left;
+    background: url("../img/dash_border.png") 0 no-repeat;
+    padding: 0 19px;
+}
+.titleBox ul li.cur a {
+    color: #52e2c0;
+    border-bottom: 2px solid #52e2c0;
+}
+.titleBox ul li a {
+    color: #666;
+    font-size: 14px;
+    padding-bottom: 16px;
+    line-height: 20px;
+}
+.line{
+	height: 2px;
+    background: #f4f4f4;
+    margin-top: -2px;
+}
+.disabled{
+	display: none;
+}
+.contentBox {
+    padding-top: 17px;
+    height: 398px;
+    overflow: hidden;
+    position: relative;
+}
+.titleBox .change {
+    color: #a4a4a4;
+    font-size: 14px;
+    float: right;
+    background: url("../img/change.png") 3px 3px no-repeat;
+    padding-left: 23px;
+}
+.titleBox .change:hover {
+    background: url("../img/change_hover.png") no-repeat;
+    color: #52e2c0;
+}
+.titleBox ul li a:hover {
+    color: #52e2c0;
+}
+
+
+
+/*---------------------------首播---------------------------*/
+.contentBox ul {
+    overflow: hidden;
+}
+.contentBox li {
+    float: left;
+    margin-left: 30px;
+    width: 220px;
+}
+.contentBox li img {
+    width: 220px;
+    height: 124px;
+    display: block;
+}
+.contentBox li h5 {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 12px 12px 10px;
+    width: 196px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.contentBox li p {
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0 12px 21px;
+    color: #a4a4a4;
+    width: 196px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.contentBox li.li01 {
+    margin-left: 0;
+    width: 470px;
+}
+.contentBox li.li01 img {
+    width: 470px;
+    height: 323px;
+    display: block;
+}
+.contentBox li.li01 h5 {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 12px 12px 12px;
+    width: 445px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.contentBox li.li01 p {
+    font-size: 14px;
+    line-height: 14px;
+    margin: 0 12px;
+    width: 445px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.sliderBox {
+    position: relative;
+    overflow: hidden;
+}
+.sliderBox .slider {
+    width: 470px;
+    height: 378px;
+    position: relative;
+    overflow: hidden;
+}
+.sliderBox .sliderEle {
+    float: left;
+    position: relative;
+    overflow: hidden;
+    width: 470px;
+    margin-left: 0;
+}
+.contentBox .mv_one:hover h5, .contentBox .mv_one:hover p {
+    color: #52e2c0;
+}
+.contentBox li.li01:hover h5, .contentBox li.li01:hover p {
+    color: #52e2c0;
+}
+/*---------------------------首播---------------------------*/
+
+
+
+/*---------------------------娱乐---------------------------*/
+
+/*---------------------------娱乐---------------------------*/
+
+
+
+/*---------------------------热播推荐---------------------------*/
+.contentBox_row1 {
+    height: 199px;
+}
+.contentBox li:first-child {
+    margin-left: 0;
+}
+.contentBox_row1 li:hover h5, .contentBox_row1 li:hover p {
+    color: #52e2c0;
+}
+/*---------------------------热播推荐---------------------------*/
+
+
+
+/*---------------------------音悦V榜---------------------------*/
+.titleBox .titleLink {
+    float: left;
+    margin-left: 15px;
+    overflow: hidden;
+    margin-top: 6px;
+}
+.titleBox .titleLink a {
+    color: #666;
+    font-size: 14px;
+    padding: 0 13px;
+    line-height: 14px;
+    float: left;
+    border-left: 1px solid #e5e5e5;
+}
+.titleBox .titleLink a:hover {
+    color: #52e2c0;
+}
+
+.contentBox_vchart ul, .contentBox_program ul {
+    height: 378px;
+    overflow: hidden;
+}
+.contentBox_vchart li h4.date_ch, .contentBox_program li h4.date_ch {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+}
+.contentBox_vchart li span.date_en, .contentBox_program li span.date_en {
+    color: #a4a4a4;
+    display: block;
+    margin-bottom: 15px;
+}
+.contentBox_vchart li .vchart_item, .contentBox_program li .program_item {
+    border-top: 1px solid #f4f4f4;
+    cursor: pointer;
+    height: 73px;
+}
+.contentBox_vchart li .vchart_item_active, .contentBox_vchart li .vchart_item01, .contentBox_program li .program_item_active, .contentBox_program li .program_item01 {
+    border-top: none;
+    height: 192px;
+}
+.contentBox_vchart li h5, .contentBox_program li h5 {
+    font-size: 14px;
+    line-height: 25px;
+    margin: 12px 12px 8px;
+    max-height: 50px;
+    text-overflow: inherit;
+    white-space: inherit;
+}
+.contentBox_vchart li .vchart_item_active h5, .contentBox_program li .program_item_active h5 {
+    color: #52e2c0;
+}
+.contentBox_vchart li .vchart_item img, .contentBox_program li .program_item img {
+    height: 120px;
+    display: none;
+}
+.contentBox_vchart li .vchart_item_active img, .contentBox_vchart li .vchart_item01 img, .contentBox_program li .program_item01 img, .contentBox_program li .program_item_active img {
+    display: block;
+}
+
+/*---------------------------音悦V榜---------------------------*/
+
+
+
+/*---------------------------自制节目---------------------------*/
+.titleBox .moreLink {
+    color: #a4a4a4;
+    font-size: 14px;
+    float: right;
+}
+.titleBox .moreLink:hover {
+    color: #52e2c0;
+}
+/*---------------------------自制节目---------------------------*/
+
+
+/*---------------------------精品悦单---------------------------*/
+.contentBox_playlist {
+    height: 294px;
+}
+.contentBox_playlist ul {
+    height: 270px;
+    overflow: hidden;
+}
+.contentBox li:first-child {
+    margin-left: 0;
+}
+.contentBox_playlist li {
+    position: relative;
+    cursor: pointer;
+}
+.contentBox_playlist li img {
+    width: 220px;
+    height: 220px;
+}
+.contentBox_playlist li h5 {
+    margin: 11px 12px 8px;
+}
+.contentBox_playlist li p {
+    margin: 0 12px;
+}
+.contentBox_playlist li:hover h5, .contentBox_playlist li:hover p {
+    color: #52e2c0;
+}
+/*---------------------------精品悦单---------------------------*/
+
+
+/*---------------------------猜你喜欢---------------------------*/
+
+/*---------------------------猜你喜欢---------------------------*/
+
+@media screen and (max-width:1273px){
+	.index_box {
+	    width: 970px;
+	}
+}
+/*--------------------------------------------页面内容---------------------------------------------*/

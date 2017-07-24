@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+// alert(window.navigator.userAgent)
+function goPAGE() {
+	if ((window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+		//移动端浏览
+		window.location.href="./index-model/index.html"
+	}
+	else {
+   		//桌面端
+   		window.location.href="./index-pc/index.html"
+    }
+}
+goPAGE()
+
+
+</script>
+</html>

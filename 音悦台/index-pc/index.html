@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="app">
+  	<!-------------------------------------头部导航条--------------------------------------------->
+  	<div class="topbar">
+  	  <div class="content">
+  	  	<!--logo-->
+  	  	<h1 class="fl">
+  	  		<a href="http://www.yinyuetai.com" class="logo" title="音悦Tai" >音悦Tai - Logo</a>
+  	  	</h1>
+  	  	<!--首页导航-->
+	  	<ul class="menus fl">
+					<li class="menu hoverhandler">
+						<a href="index.html" class="link statisEle current" statis-event="click" statis-value="SY_ZDH_index">首页</a>
+					</li>
+					<li class="menu hoverhandler">
+						<a href="#/mv" class="link statisEle ">
+							<span class="fl" style="*margin-top:-1px;">MV</span>
+							<b class="fl"></b>
+						</a>
+						<ul class="dropdownmenu fillet">
+							<li>
+								<a href="http://mv.yinyuetai.com/?id=10" class="fillet statisEle ">韩流频道</a>
+							</li>
+							<li>
+								<a href="http://mv.yinyuetai.com/?id=8" class="statisEle ">华语频道</a>
+							</li>
+							<li>
+								<a href="http://mv.yinyuetai.com/?id=9" class="statisEle ">欧美频道</a>
+							</li>
+							<li>
+								<a href="http://mv.yinyuetai.com/?id=11" class="statisEle ">日语频道</a>
+							</li>
+		          <li>
+		            <a href="http://mv.yinyuetai.com/?id=12" class="statisEle ">粉丝聚焦</a>
+		          </li>
+						</ul>
+					</li>
+					<li class="menu hoverhandler">
+						<a href="#/vb" class="link statisEle " statis-event="click" statis-value="SY_ZDH_v"><span class="fl">V榜</span></a>
+
+					</li>
+					<li class="menu hoverhandler">
+						<a href="#/yl" class="link statisEle " statis-event="click" statis-value="SY_ZDH_ent">
+							<span class="fl">娱乐</span>
+						</a>
+
+					</li>
+					<li class="menu">
+
+						<a href="#/sc" class="link shopgif statisEle " target="_blank" statis-event="click" statis-value="SY_ZDH_shop">商城</a>
+					</li>
+					<li class="menu hoverhandler">
+						<a href="http://zhongchou.yinyuetai.com" class="link statisEle " statis-event="click" statis-value="SY_ZDH_zc">
+							<span class="fl">众筹</span>
+						</a>
+					</li>
+					<li class="menu hoverhandler menu_folk" >
+						<a href="http://feature.yinyuetai.com/folkCulture" class="link statisEle " statis-event="click" statis-value="SY_ZDH_others1">
+							<span class="fl">民俗文化</span>
+						</a>
+					</li>
+				</ul>
+		<!--登录注册-->
+		<div class="login fr">
+			<a href="###" class="loginBtn J_login statisEle">登录</a>
+			<a href="###" class="J_register statisEle">注册</a>
+		</div>
+		<!--移动客户端-->
+		<ul class="menus appBox fr">
+			<li class="menu hoverhandler">
+				<a href="###" target="_blank" class="link statisEle">
+					<span class="fl appIcon"></span>
+					<b class="fl"></b>
+				</a>
+				<!--移动客户端选项卡  	:hover-->
+				<ul class="dropdownmenu fillet" style="width:95px;">
+					<li>
+						<a href="http://www.yinyuetai.com/apps/mobile" target="_blank" class="statisEle">移动客户端</a>
+					</li>
+					<li>
+						<a href="http://www.yinyuetai.com/apps/yinyue_mini" target="_blank" class="statisEle" >PC客户端</a>
+					</li>
+					<li>
+						<a href="http://startv.yinyuetai.com/app.html" target="_blank" class="statisEle ">Star明星直播</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!--投稿-->
+		<div class="upload fr">
+			<a class="uploadBtn statisEle" href="http://i.yinyuetai.com/upload" title="投稿"></a>
+		</div>
+		<!--VIP会员-->
+		<div class="vip fr">
+			<a class="vipBtn statisEle" href="http://vip.yinyuetai.com" title="vip会员"></a>
+		</div>
+		<!--搜索框-->
+		<div class="search fr">	
+					<div class="left_park_side"></div>
+					<div class="right_park_side"></div>
+					<form action="http://so.yinyuetai.com" target="_blank">
+						<div class="searchbody statisEle">
+								<input type="text" name="keyword" autocomplete="off" placeholder="多位歌手演绎《默》你喜欢哪个?">
+						</div>
+						<button type="submit" class="statisEle logStatisEle">搜索</button>
+					</form>
+					<ul class="autocomplete autocompletehide"></ul>
+				</div>
+  	  </div>
+  	</div>
+  	<!-------------------------------------头部导航条--------------------------------------------->
+  	
+  	
+  	<!-------------------------------------轮播图--------------------------------------------->
+  	<div class="slideContent">
+	    <ul>
+	    	<li class="slideEle" >
+	    		<a class="statisEle" target="_blank" ></a>
+	    	</li>
+	    	<li class="slideEle" >
+	    		<a class="statisEle" target="_blank" ></a>
+	    	</li>
+	    	<li class="slideEle" >
+	    		<a class="statisEle" target="_blank" ></a>
+	    	</li>
+	    	<li class="slideEle" >
+	    		<a class="statisEle" target="_blank" ></a>
+	    	</li>
+	    	<li class="slideEle" >
+	    		<a class="statisEle" target="_blank" ></a>
+	    	</li>
+	    	<li class="slideEle" >
+	    		<a class="statisEle" target="_blank" ></a>
+	    	</li>
+	    	<li class="slideEle" >
+	    		<a class="statisEle" target="_blank" ></a>
+	    	</li>
+	    	<li class="slideEle" >
+	    		<a class="statisEle" target="_blank" ></a>
+	    	</li>
+	    	<li class="slideEle" >
+	    		<a class="statisEle" target="_blank" ></a>
+	    	</li>
+	    	<li class="slideEle" >
+	    		<a class="statisEle" target="_blank" ></a>
+	    	</li>
+	    </ul>
+	    <div class="autoBox">
+	        <div class="bannerTitleBox">
+	        	<a class="slideTitle statisEle">薛之谦四首新歌强势霸榜</a>
+	        	<a class="slideTitle statisEle">风之密码EP7 破壁次元少年</a>
+	        	<a class="slideTitle statisEle">Krist&amp;Singto苦练中文 甜歌送粉丝</a>
+	        	<a class="slideTitle statisEle">这些KTV必点女声歌超级辣嗓子！</a>
+	        	<a class="slideTitle statisEle">2017上半年女爱豆solo成绩单</a>
+	        	<a class="slideTitle statisEle">全是套路？王博文V5澳门行</a>
+	        	<a class="slideTitle statisEle">YHBOYS的艺能时光机 EP03 文武大会(上)</a>
+	        	<a class="slideTitle statisEle">阿损聊聊B榜那点事 V榜有话说EP07</a>
+	        	<a class="slideTitle statisEle">对话|《加勒比海盗5》我Jack船长回来了！</a>
+	        	<a class="slideTitle statisEle active">ACG歌姬们的开口跪现场</a>
+	        </div>
+	    </div>
+	</div>
+  	<!-------------------------------------轮播图--------------------------------------------->
+  	
+  	
+  	
+  	<!-------------------------------------主页内容--------------------------------------------->
+  	<div class="index_content">
+  		<!--广告位-->
+  		<div class="focus_bottom_banner" style="overflow: hidden; text-align: center;width:100%;">
+            <div class="banner_container" style="margin: 10px auto; display: block;width:100%;">
+                </div>
+        </div>
+        <!--首播-->
+        <div class="index_box_outer index_box_turn">
+            <div class="index_box">
+                <div class="titleBox">
+                    <h3>首播</h3>
+                    <ul>
+                        <li class="cur">
+                        	<a href="javascript:void(0);" class="J_area statisEle" >全部</a>
+                        </li>
+                        <li>
+                        	<a href="javascript:void(0);" class="J_area statisEle">内地</a>
+                        </li>
+                        <li>
+                        	<a href="javascript:void(0);" class="J_area statisEle">港台</a>
+                        </li>
+                        <li>
+                        	<a href="javascript:void(0);" class="J_area statisEle">欧美</a>
+                        </li>
+                        <li>
+                        	<a href="javascript:void(0);" class="J_area statisEle">韩国</a>
+                        </li>
+                        <li>
+                        	<a href="javascript:void(0);" class="J_area statisEle">日本</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="line"></div>
+                <a title="上一张" class="disabled">上一张</a>
+                <a title="下一张" class="disabled">下一张</a>
+                <div class="contentBox">
+                    <ul class="firstMvList">
+                    	<li class="li01 sliderBox">
+							<ul class="slider">
+								<li class="sliderEle" style="display: list-item;">
+									<a class="statisEle" target="_blank">
+										<img src="img/3.png" alt="">
+										<h5>林肯公园新单《Talking To Myself》</h5>
+										<p>等来新MV，你却已经离开。</p>
+									</a>
+								</li>
+								<li class="sliderEle" style="display: none;">
+									<a class="statisEle" target="_blank">
+										<img src="img/3.png" alt="">
+										<h5>Coming Home 官方版 </h5>
+										<p>嘻哈不灭‧唱跳不歇‧创作不懈</p>
+									</a>
+								</li>
+							</ul>
+							<span class="mv-prev J_toggle statisEle" title="上一张"></span>
+							<span class="mv-next J_toggle statisEle" title="下一张"></span>
+						</li>
+						<li class="mv_x2">
+							<div class="mv_one">
+								<a class=" statisEle" target="_blank">
+									<img src="img/4.jpg" alt="FIVE 练习室版">
+									<h5>FIVE 练习室版</h5>
+									<p>Apink</p>
+								</a>
+							</div>
+							<div class="mv_one">
+								<a class=" statisEle" target="_blank">
+									<img src="img/5.jpg" alt="Rich Love  官方歌词版">
+									<h5>Rich Love  官方歌词版</h5>
+									<p>OneRepublic &amp; SeeB</p>
+								</a>
+							</div>
+						</li>
+						<li class="mv_x2">
+							<div class="mv_one">
+								<a class=" statisEle" target="_blank">
+									<img src="img/6.jpg" alt="Back to You  - Louis Tomlinson ft. Bebe Rexha">
+									<h5>Back to You  - Louis Tomlinson ft. Bebe Rexha</h5>
+									<p>Bebe Rexha &amp; Louis Tomlinson</p>
+								</a>
+							</div>
+							<div class="mv_one">
+								<a class=" statisEle" target="_blank">
+									<img src="img/7.jpg" alt="告别少年 官方版">
+									<h5>告别少年 官方版</h5>
+									<p>SWIN组合</p>
+								</a>
+							</div>
+						</li>
+						<li class="mv_x2">
+							<div class="mv_one">
+								<a class=" statisEle" target="_blank">
+									<img src="img/8.jpg" alt="Be My Friend 完整版">
+									<h5>Be My Friend 完整版</h5>
+									<p>周宪(MONSTA X) &amp; I.M(MONSTA X) &amp; MONSTA X</p>
+								</a>
+							</div>
+							<div class="mv_one">
+								<a class=" statisEle" target="_blank">
+									<img src="img/9.jpg" alt="爱你 A.I.N.Y. 2017">
+									<h5>爱你 A.I.N.Y. 2017</h5>
+									<p>邓紫棋</p>
+								</a>
+							</div>
+						</li>
+                    </ul>
+                    <div class="loading" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+        <!--娱乐-->
+        <div class="index_box_outer index_box_turn">
+            <div class="index_box">
+                <div class="titleBox">
+                    <h3>娱乐</h3>
+                    <ul>
+                        <li class="cur">
+                        	<a href="javascript:void(0);" class="J_area statisEle" >全部</a>
+                        </li>
+                        <li>
+                        	<a href="javascript:void(0);" class="J_area statisEle">现场</a>
+                        </li>
+                        <li>
+                        	<a href="javascript:void(0);" class="J_area statisEle">影视</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="line"></div>
+                <a title="上一张" class="disabled">上一张</a>
+                <a title="下一张" class="disabled">下一张</a>
+                <div class="contentBox">
+                    <ul class="entertainList">
+                    	<li class="li01 sliderBox">
+							<ul class="slider">
+								<li class="sliderEle" style="display: list-item;">
+									<a class="statisEle" target="_blank">
+										<img src="img/11.jpg" alt="">
+										<h5>【采话大盗】彭昱畅: 不想做歌手的演员不是好段子手</h5>
+										<p>掉伞少年？唱歌被diss？闪光剧组=大型杀人现场？没想到你是这样的彭昱畅</p>
+									</a>
+								</li>
+								<li class="sliderEle" style="display: none;">
+									<a class="statisEle" target="_blank">
+										<img src="img/3.png" alt="">
+										<h5>Coming Home 官方版 </h5>
+										<p>嘻哈不灭‧唱跳不歇‧创作不懈</p>
+									</a>
+								</li>
+							</ul>
+							<span class="mv-prev J_toggle statisEle" title="上一张"></span>
+							<span class="mv-next J_toggle statisEle" title="下一张"></span>
+						</li>
+						<li class="mv_x2">
+							<div class="mv_one">
+								<a class=" statisEle" target="_blank">
+									<img src="img/12.jpg" alt="阳光温暖的裴珍映">
+									<h5>阳光温暖的裴珍映</h5>
+									<p>为小狼爆灯！</p>
+								</a>
+							</div>
+							<div class="mv_one">
+								<a class=" statisEle" target="_blank">
+									<img src="img/13.jpg" alt="BLACKPINK日本showcase《BOMBAYAH》&《玩火》">
+									<h5>BLACKPINK日本showcase《BOMBAYAH》&《玩火》</h5>
+									<p>粉墨妹子现场实力太赞！</p>
+								</a>
+							</div>
+						</li>
+						<li class="mv_x2">
+							<div class="mv_one">
+								<a class=" statisEle" target="_blank">
+									<img src="img/14.jpg" alt="林俊杰Mix王力宏蹦出新滋味">
+									<h5>林俊杰Mix王力宏蹦出新滋味!</h5>
+									<p>《大城小爱》里是你《爱笑的眼睛》</p>
+								</a>
+							</div>
+							<div class="mv_one">
+								<a class=" statisEle" target="_blank">
+									<img src="img/15.jpg" alt="林肯公园主唱Chester Bennington自杀身亡！">
+									<h5>林肯公园主唱Chester Bennington自杀身亡！</h5>
+									<p>无可磨灭，无可取代，回顾Chester十大经典瞬间！</p>
+								</a>
+							</div>
+						</li>
+						<li class="mv_x2">
+							<div class="mv_one">
+								<a class=" statisEle" target="_blank">
+									<img src="img/16.jpg" alt="张翰《听妈妈的话》唱绝了！">
+									<h5>张翰《听妈妈的话》唱绝了！</h5>
+									<p>翰哥你经历了什么！</p>
+								</a>
+							</div>
+							<div class="mv_one">
+								<a class=" statisEle" target="_blank">
+									<img src="img/17.jpg" alt="终结之谷之战 《火影忍者》 AMV">
+									<h5>终结之谷之战 《火影忍者》 AMV</h5>
+									<p>和你一起生存下去</p>
+								</a>
+							</div>
+						</li>
+                    </ul>
+                    <div class="loading" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+        <!--热播推荐-->
+        <div class="index_box_outer index_box_turn">
+            <div class="index_box">
+                <div class="titleBox">
+                    <h3>热播推荐</h3>
+                    <a class="change J_change_hot statisEle" href="javascript:void(0)" >换一换</a>
+                </div>
+                <div class="line"></div>
+                <div class="contentBox contentBox_row1">
+                    <ul class="hotList">
+                    	<li class="hot_group1" style="display: list-item;">
+							<a class="statisEle"><img src="img/21.jpg" alt="杨洋完美诠释极致优雅">
+								<h5>杨洋完美诠释极致优雅</h5>
+								<p>淡然从衣袂中探出枝桠</p>
+							</a>
+						</li>
+						<li class="hot_group1" style="display: list-item;">
+							<a class="statisEle"><img src="img/22.jpg" alt="TWICE《优雅地》&amp;《TT》混音">
+								<h5>TWICE《优雅地》&amp;《TT》混音</h5>
+								<p>中毒旋律根本停不下来！</p>
+							</a>
+						</li>
+						<li class="hot_group1" style="display: list-item;">
+							<a class="statisEle"><img src="img/23.jpg" alt="防弹少年团超强LIVE合集">
+								<h5>防弹少年团超强LIVE合集</h5>
+								<p>胖弹的每只都超好❤</p>
+							</a>
+						</li>
+						<li class="hot_group1" style="display: list-item;">
+							<a class="statisEle"><img src="img/24.jpg" alt="八分钟回顾林肯公园20年">
+								<h5>八分钟回顾林肯公园20年</h5>
+								<p>一路走好</p>
+							</a>
+						</li>
+						<li class="hot_group1" style="display: list-item;">
+							<a class="statisEle"><img src="img/25.jpg" alt="周笔畅张碧晨清唱《凉凉》">
+								<h5>周笔畅张碧晨清唱《凉凉》</h5>
+								<p>经典再度演绎~好听</p>
+							</a>
+						</li>
+                    </ul>
+                    <div class="loading" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+        <!--音悦V榜-->
+        <div class="index_box_outer index_box_turn">
+            <div class="index_box">
+                <div class="titleBox">
+                    <h3>音悦V榜</h3>
+                    <div class="titleLink titleLink_vchart">
+                    	<a class="statisEle" target="_blank">TOP10</a>
+                    	<a class="statisEle" target="_blank">看音乐</a>
+                    	<a class="statisEle" target="_blank">密谈室</a>
+                    	<a class="statisEle" target="_blank">有话说</a>
+                    	<a class="statisEle" target="_blank">特别企划</a>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <a title="上一张" class="disabled">上一张</a>
+                <a title="下一张" class="disabled">下一张</a>
+                <div class="contentBox contentBox_vchart">
+                    <ul class="vchartList">
+						<li class="li01">
+							<a class="statisEle">
+								<img src="img/41.jpg" alt="夏日女团清凉回归 V榜特别企划EP194">
+								<h5>夏日女团清凉回归 V榜特别企划EP194</h5>
+								<p>欧尼！欧尼！我爱你！</p>
+							</a>
+						</li>
+						<li>
+							<div class="dateBox">
+								<h4 class="date_ch">周五节目单</h4>
+								<span class="date_en">FRIDAY</span>
+							</div>
+							<div class="vchart_item vchart_item_active">
+								<a class="statisEle">
+									<img src="img/41.jpg" alt="夏日女团清凉回归 V榜特别企划EP194">
+									<h5>夏日女团清凉回归 V榜特别企划EP194</h5>
+								</a>
+							</div>
+							<div class="vchart_item">
+								<a class="statisEle">
+									<img src="img/41.jpg" alt="2017夏季日剧档开更啦">
+									<h5>2017夏季日剧档开更啦</h5>
+								</a>
+							</div>
+							<div class="vchart_item">
+								<a class="statisEle">
+									<img src="img/41.jpg" alt="V榜特别企划EP192 推陈出新的风向标">
+									<h5>V榜特别企划EP192 推陈出新的风向标</h5>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="dateBox">
+								<h4 class="date_ch">周四节目单</h4>
+								<span class="date_en">THURSDAY</span>
+							</div>
+							<div class="vchart_item vchart_item_active">
+								<a class="statisEle"><img src="img/42.jpg" alt="2017上半年男团评价排行榜 V榜有话说 EP11">
+									<h5>2017上半年男团评价排行榜 V榜有话说 EP11</h5>
+								</a>
+							</div>
+							<div class="vchart_item">
+								<a class="statisEle"><img src="" alt="2017上半年女团评价排行榜 V榜有话说EP10">
+									<h5>2017上半年女团评价排行榜 V榜有话说EP10</h5>
+								</a>
+							</div>
+							<div class="vchart_item">
+								<a class="statisEle"><img src="" alt="AKB48总选举一个时代的落幕 V榜有话说EP09">
+									<h5>AKB48总选举一个时代的落幕 V榜有话说EP09</h5>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="dateBox">
+								<h4 class="date_ch">周三节目单</h4>
+								<span class="date_en">WEDNESDAY</span>
+							</div>
+							<div class="vchart_item vchart_item01 vchart_item_active">
+								<a class="statisEle">
+									<img src="img/43.jpg" alt="徐良.十国十色 V榜密谈室EP21">
+									<h5>徐良.十国十色 V榜密谈室EP21</h5>
+								</a>
+							</div>
+							<div class="vchart_item">
+								<a class="statisEle">
+									<img src="" alt="V榜密谈室EP20 元气满满Miwa">
+									<h5>V榜密谈室EP20 元气满满Miwa</h5>
+								</a>
+							</div>
+							<div class="vchart_item">
+								<a class="statisEle">
+									<img src="" alt="性感玫瑰DuaLipa V榜密谈室EP19">
+									<h5>性感玫瑰DuaLipa V榜密谈室EP19</h5>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="dateBox">
+								<h4 class="date_ch">周二节目单</h4>
+								<span class="date_en">TUESDAY</span>
+							</div>
+							<div class="vchart_item vchart_item01">
+								<a class="statisEle">
+									<img src="" alt="暑期档电视剧OST友情大放送 V榜看音乐EP15">
+									<h5>暑期档电视剧OST友情大放送 V榜看音乐EP15</h5>
+								</a>
+							</div>
+							<div class="vchart_item ">
+								<a class="statisEle">
+									<img src="" alt="出场自带动漫BGM的歌手 V榜看音乐EP14">
+									<h5>出场自带动漫BGM的歌手 V榜看音乐EP14</h5>
+								</a>
+							</div>
+							<div class="vchart_item ">
+								<a class="statisEle">
+									<img src="" alt="我有实力我骄傲我的王冠不会掉 V榜看音乐EP13">
+									<h5>我有实力我骄傲我的王冠不会掉 V榜看音乐EP13</h5>
+								</a>
+							</div>
+						</li>
+					</ul>
+                    <div class="loading" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+        <!--自制节目-->
+        <div class="index_box_outer index_box_turn">
+            <div class="index_box">
+                <div class="titleBox">
+                    <h3>自制节目</h3>
+                    <a class="moreLink statisEle">查看更多》</a>
+                </div>
+                <div class="line"></div>
+                <a title="上一张" class="disabled">上一张</a>
+                <a title="下一张" class="disabled">下一张</a>
+                <div class="contentBox contentBox_program">
+                    <ul class="programList">
+						<li class="li01">
+							<a class="statisEle">
+								<img src="img/44.jpg" alt="徐璐喊话阮经天：我是看你的戏长大的？！">
+								<h5>徐璐喊话阮经天：我是看你的戏长大的？！</h5>
+								<p>徐璐现场模仿樱桃小丸子，萌萌哒！</p>
+							</a>
+						</li>
+						<li>
+							<div class="dateBox">
+								<h4 class="date_ch">STAR！调查团</h4>
+								<span class="date_en">INVESTIGATION MISSION</span>
+							</div>
+							<div class="program_item program_item_active">
+								<a class="statisEle">
+									<img src="img/45.jpg" alt="728粉丝节特辑 - 请回答,张杰!">
+									<h5>728粉丝节特辑 - 请回答,张杰!</h5>
+								</a>
+							</div>
+							<div class="program_item">
+								<a class="statisEle">
+									<img src="" alt="会闪光的少女 - 徐璐专访">
+									<h5>会闪光的少女 - 徐璐专访</h5>
+								</a>
+							</div>
+							<div class="program_item">
+								<a class="statisEle">
+									<img src="" alt="张艺兴天生自带呆萌属性">
+									<h5>张艺兴天生自带呆萌属性</h5>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="dateBox">
+								<h4 class="date_ch">YHBOYS的艺能时光机</h4>
+								<span class="date_en">YHBOYS TIME MACHINE</span>
+							</div>
+							<div class="program_item program_item_active">
+								<a class="statisEle">
+									<img src="img/46.jpg" alt="YHBOYS的艺能时光机 花絮特辑 未公开片段大放送">
+									<h5>YHBOYS的艺能时光机 花絮特辑 未公开片段大放送</h5>
+								</a>
+							</div>
+							<div class="program_item">
+								<a class="statisEle">
+									<img src="" alt="YHBOYS的艺能时光机 EP08 人生首次迷你粉丝见面会">
+									<h5>YHBOYS的艺能时光机 EP08 人生首次迷你粉丝见面会</h5>
+								</a>
+							</div>
+							<div class="program_item">
+								<a class="statisEle">
+									<img src="" alt="YHBOYS的艺能时光机 EP07 工作人员身份体验">
+									<h5>YHBOYS的艺能时光机 EP07 工作人员身份体验</h5>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="dateBox">
+								<h4 class="date_ch">音悦大来宾</h4>
+								<span class="date_en">YINYUE GUEST</span>
+							</div>
+							<div class="program_item program_item_active">
+								<a class="statisEle">
+									<img src="img/47.jpg" alt="金钟炫被爆睡前萌料? NU'EST-M队内可爱大PK!">
+									<h5>金钟炫被爆睡前萌料? NU'EST-M队内可爱大PK!</h5>
+								</a>
+							</div>
+							<div class="program_item">
+								<a class="statisEle">
+									<img src="" alt="吃货小白各种套路节目组">
+									<h5>吃货小白各种套路节目组</h5>
+								</a>
+							</div>
+							<div class="program_item ">
+								<a class="statisEle">
+									<img src="" alt="王博文生日愿望大公开">
+									<h5>王博文生日愿望大公开</h5>
+								</a>
+							</div>
+						</li>
+					</ul>
+                    <div class="loading" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+        <!--精品悦单-->
+        <div class="index_box_outer index_box_turn">
+            <div class="index_box">
+                <div class="titleBox">
+                    <h3>精品悦单</h3>
+                    <a class="moreLink statisEle">查看更多》</a>
+                </div>
+                <div class="line"></div>
+                <a title="上一张" class="disabled">上一张</a>
+                <a title="下一张" class="disabled">下一张</a>
+                <div class="contentBox contentBox_playlist">
+                    <ul class="playlistList">
+						<li>
+							<div class="statisEleHover"><img src="img/51.jpg" alt="T-ara出道至今MV合辑">
+								<h5>T-ara出道至今MV合辑</h5>
+								<p>欲戴王冠必承其重,经历了无数坎坷艰辛,你们头顶的皇冠也愈发闪亮。坚持终有奇迹,相信未来你们定会走得更加精彩!</p>
+							</div>
+							<div class="hoverBox disabled">
+								<a class="statisEle">
+									<div class="img_box">
+										<img src="" alt="">
+										<span class="img_box_shadow"></span>
+									</div>
+									<div class="info_box">
+										<div class="heightLimit">
+											<h4>T-ara出道至今MV合辑</h4>
+											<span class="des">欲戴王冠必承其重,经历了无数坎坷艰辛,你们头顶的皇冠也愈发闪亮。坚持终有奇迹,相信未来你们定会走得更加精彩!</span>
+										</div>
+										<div class="user_box">
+											<img src="" alt="小丸子_">
+											<span class="userName">小丸子_</span>
+										</div>
+										<span class="count"><i></i>1.0万</span>
+										<span class="count">收录MV：27首</span>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="statisEleHover">
+								<img src="img/52.jpg" alt="爱听她唱歌:我的偶像是孙燕姿">
+								<h5>爱听她唱歌:我的偶像是孙燕姿</h5>
+								<p>从燕姿到姿妈,这些歌都陪着我们,一点一滴,当熟悉的旋律响起,有的不仅仅是大合唱,还会浮现最美的那些记忆!</p>
+							</div>
+							<div class="hoverBox disabled">
+								<a class="statisEle">
+									<div class="img_box">
+										<img src="" alt="">
+										<span class="img_box_shadow"></span>
+									</div>
+									<div class="info_box">
+										<div class="heightLimit">
+											<h4>爱听她唱歌:我的偶像是孙燕姿</h4>
+											<span class="des">从燕姿到姿妈,这些歌都陪着我们,一点一滴,当熟悉的旋律响起,有的不仅仅是大合唱,还会浮现最美的那些记忆!</span>
+										</div>
+										<div class="user_box">
+											<img src="" alt="小贱碟">
+											<span class="userName">小贱碟</span>
+										</div>
+										<span class="count"><i></i>1171</span>
+										<span class="count">收录MV：31首</span>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="statisEleHover"><img src="img/53.jpg" alt="薛之谦散落在歌声中的故事">
+								<h5>薛之谦散落在歌声中的故事</h5>
+								<p>0717一起许愿:世界和平&amp;lt;br /&amp;gt;爱我的人谢谢你</p>
+							</div>
+							<div class="hoverBox disabled">
+								<a class="statisEle">
+									<div class="img_box">
+										<img src="" alt="">
+										<span class="img_box_shadow"></span>
+									</div>
+									<div class="info_box">
+										<div class="heightLimit">
+											<h4>薛之谦散落在歌声中的故事</h4>
+											<span class="des">0717一起许愿:世界和平&amp;lt;br /&amp;gt;爱我的人谢谢你</span>
+										</div>
+										<div class="user_box">
+											<img src="" alt="给你举个栗子">
+											<span class="userName">给你举个栗子</span>
+										</div>
+										<span class="count"><i></i>2.0万</span>
+										<span class="count">收录MV：39首</span>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="statisEleHover">
+								<img src="img/54.jpg" alt="“甜蜜人夫”林宥嘉的婚前苦情歌系列">
+								<h5>“甜蜜人夫”林宥嘉的婚前苦情歌系列</h5>
+								<p>“甜蜜人夫”林宥嘉的婚前苦情歌系列</p>
+							</div>
+							<div class="hoverBox disabled">
+								<a class="statisEle">
+									<div class="img_box">
+										<img src="" alt="">
+										<span class="img_box_shadow"></span>
+									</div>
+									<div class="info_box">
+										<div class="heightLimit">
+											<h4>“甜蜜人夫”林宥嘉的婚前苦情歌系列</h4>
+											<span class="des">“甜蜜人夫”林宥嘉的婚前苦情歌系列</span>
+										</div>
+										<div class="user_box">
+											<img src="" alt="她说">
+											<span class="userName">她说</span>
+										</div>
+										<span class="count"><i></i>1.0万</span>
+										<span class="count">收录MV：34首</span>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="statisEleHover">
+								<img src="img/55.jpg" alt="INFINITE出道七年MV合辑">
+								<h5>INFINITE出道七年MV合辑</h5>
+								<p>#INFINITE# 一步步迎着艰难向前,咽下所有的艰辛苦痛,靠着实力走到今天。七年远远不是终点,以后还会有很多个七年,inspirit会一直陪在INFINITE身边,以后的路,继续携手前行,无限一直是永不褪色的夏天。追梦脚步不停,无限定能无限!</p>
+							</div>
+							<div class="hoverBox disabled">
+								<a class="statisEle">
+									<div class="img_box">
+										<img src="" alt="">
+										<span class="img_box_shadow"></span>
+									</div>
+									<div class="info_box">
+										<div class="heightLimit">
+											<h4>INFINITE出道七年MV合辑</h4>
+											<span class="des">#INFINITE# 一步步迎着艰难向前,咽下所有的艰辛苦痛,靠着实力走到今天。七年远远不是终点,以后还会有很多个七年,inspirit会一直陪在INFINITE身边,以后的路,继续携手前行,无限一直是永不褪色的夏天。追梦脚步不停,无限定能无限!</span>
+										</div>
+										<div class="user_box">
+											<img src="" alt="我是一粒米">
+											<span class="userName">我是一粒米</span>
+										</div>
+										<span class="count"><i></i>1.0万</span>
+										<span class="count">收录MV：25首</span>
+									</div>
+								</a>
+							</div>
+						</li>
+					</ul>
+                    <div class="loading" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+        <!--猜你喜欢-->
+        <div class="index_box_outer index_box_turn">
+            <div class="index_box">
+                <div class="titleBox">
+                    <h3>猜你喜欢</h3>
+                    <a class="change J_change_hot statisEle" href="javascript:void(0)" >换一换</a>
+                </div>
+                <div class="line"></div>
+                <a title="上一张" class="disabled">上一张</a>
+                <a title="下一张" class="disabled">下一张</a>
+                <div class="contentBox contentBox_row1">
+                    <ul class="hotList">
+                    	<li class="hot_group1" style="display: list-item;">
+							<a class="statisEle"><img src="img/26.jpg" alt="我的锅 官方版">
+							<h5>我的锅 官方版</h5>
+							<p>战斗少女ATF</p>
+							</a>
+						</li>
+						<li class="hot_group1" style="display: list-item;">
+							<a class="statisEle"><img src="img/27.jpg" alt="Generation2">
+							<h5>Generation2</h5>
+							<p>王嘉尔(GOT7)</p>
+							</a>
+						</li>
+						<li class="hot_group1" style="display: list-item;">
+							<a class="statisEle"><img src="img/28.jpg" alt="动物世界 官方版">
+							<h5>动物世界 官方版</h5>
+							<p>薛之谦</p>
+							</a>
+						</li>
+						<li class="hot_group1" style="display: list-item;">
+							<a class="statisEle"><img src="img/29.jpg" alt="What’s My Name 完整版">
+							<h5>What’s My Name 完整版</h5>
+							<p>T-ara</p>
+							</a>
+						</li>
+						<li class="hot_group1" style="display: list-item;">
+							<a class="statisEle"><img src="img/30.jpg" alt="Ko Ko Bop 韩文版">
+							<h5>Ko Ko Bop 韩文版</h5>
+							<p>EXO</p>
+							</a>
+						</li>
+                    </ul>
+                    <div class="loading" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+  	</div>
+  	<!-------------------------------------主页内容--------------------------------------------->
+  	
+  	
+  	
+  	
+  	<!-------------------------------------底部页脚----------------------------------------------->
+  	<div class="footer">
+			<p class="footer_link">
+				<a href="http://www.yinyuetai.com/article/3" target="_blank" title="关于我们">关于我们</a>
+				<span class="ico_line"></span>
+				<a href="http://www.yinyuetai.com/joinus" target="_blank" title="人才招聘">人才招聘</a>
+				<span class="ico_line"></span>
+				<a href="http://www.yinyuetai.com/article/1" target="_blank" title="联系我们">联系我们</a>
+				<span class="ico_line"></span>
+				<a href="http://www.yinyuetai.com/links" target="_blank" title="友情链接">友情链接</a>
+				<span class="ico_line"></span>
+				<a href="http://www.yinyuetai.com/article/4" target="_blank" title="版权声明">版权声明</a>
+				<span class="ico_line"></span>
+				<a href="http://www.yinyuetai.com/service/problem" target="_blank" title="客服中心">客服中心</a>
+			</p>
+		
+			<p class="footer_copy">
+				<a href="###" target="_blank">
+					<img src="./img/culture.png" style="vertical-align: top;width:25px;height:25px;margin-right:3px;">
+				</a>
+				Copyright © 2009 - 2017 yinyuetai.com 广播电视节目制作经营 许可证编号(京)字第1891号 | <a href="###" target="_blank">京网文[2014]2037-287号</a>
+				| <a href="###" title="网络视听许可证0110413号" target="_blank">网络视听许可证0110413号</a><br>
+				<a class="police-store" href="###" target="_blank">
+					<img src="./img/ghs.png" style="vertical-align: top;">
+					京公网安备11010502014900号
+				</a>| 京ICP备11024134号-1 | 京ICP证060716号 | 出版物经营许可证 <a href="###" target="_blank">新出发京批字第直160022号</a> | 增值电信业务经营许可证B2-20140501
+				<a href="###" target="_blank" class="positionImg">
+					<img src="./img/biaoshi.gif" style="vertical-align: top; margin-top: -25px;"></a>
+			</p>
+		</div>
+  	<!-------------------------------------底部页脚----------------------------------------------->
+  	
+</div>
+</body>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/index.js"></script>
+</html>
