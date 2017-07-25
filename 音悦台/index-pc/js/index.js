@@ -121,8 +121,14 @@ $(function () {
 		$(this).addClass("program_item_active")
 	})
 	
+	//	返回顶部
 	
-
+	$(".return_top_wrapper").click(function(){
+		setTimeout(function(){
+			window.scrollBy(0,-10000);
+		},100)
+	})
+	
 });	
 
 

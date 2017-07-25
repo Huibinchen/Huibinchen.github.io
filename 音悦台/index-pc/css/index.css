@@ -86,6 +86,9 @@ ul,li{
 	float: left;
 	margin: 0px 6px;
 }
+.menu a.current{
+	color: #cf9;
+}
 .topbar .link {
 	display: block;
 	padding: 0 12px 0 13px;
@@ -877,3 +880,37 @@ input,button{
     display: none;
 }
 /*--------------------------------------------页面内容---------------------------------------------*/
+
+/*-------------------------------------返回顶部---------------------------------------------*/
+.return_top_wrapper {
+    height: 65px;
+    position: fixed;
+    right: 0;
+    top: 460px;
+    z-index: 298;
+    _position: absolute;
+    _bottom: auto;
+    overflow: hidden;
+    /*display: none;*/	
+}
+.return_top_wrapper div {
+    height: 65px;
+    width: 50px;
+}
+.return_top_wrapper a.return_top_static {
+    background: url("../img/returntop.png") no-repeat;
+    left: 0;
+}
+.return_top_wrapper a {
+    position: absolute;
+    height: 65px;
+    width: 50px;
+    top: 0;
+}
+.return_top_wrapper a.return_top_running {
+    background: url("../img/returntop.png") no-repeat;
+    position: absolute;
+    left: -50px;
+}
+
+/*-------------------------------------返回顶部---------------------------------------------*/
