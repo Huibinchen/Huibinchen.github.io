@@ -581,14 +581,17 @@ input,button{
     white-space: nowrap;
 }
 .sliderBox {
+	width: 470px;
     position: relative;
     overflow: hidden;
 }
 .sliderBox .slider {
-    width: 470px;
+    width: 940px;
     height: 378px;
     position: relative;
     overflow: hidden;
+    transition: margin-left 1s;
+    -webkit-transition: margin-left 1s; 
 }
 .sliderBox .sliderEle {
     float: left;
@@ -602,6 +605,29 @@ input,button{
 }
 .contentBox li.li01:hover h5, .contentBox li.li01:hover p {
     color: #52e2c0;
+}
+
+
+.mv-prev, .mv-prev:hover, .mv-next, .mv-next:hover {
+    background: url("../img/arrow.png");
+    width: 13px;
+    height: 25px;
+    position: absolute;
+    top: 150px;
+    cursor: pointer;
+}
+.mv-prev {
+    left: 10px;
+}
+.mv-prev:hover {
+    background-position: 0 -25px;
+}
+.mv-next {
+	right: 10px;
+    background-position: -13px 0;
+}
+.mv-next:hover {
+    background-position: -13px -25px;
 }
 /*---------------------------首播---------------------------*/
 
@@ -732,6 +758,101 @@ input,button{
 .contentBox_playlist li:hover h5, .contentBox_playlist li:hover p {
     color: #52e2c0;
 }
+
+.contentBox_playlist .hoverBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 470px;
+    height: 270px;
+    background: #f3f5f7;
+    z-index: 1;
+    overflow: hidden;
+    display: none;
+}
+.contentBox_playlist li:hover .hoverBox {
+    display: block;
+}
+.hoverBox .img_box img {
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+.hoverBox .img_box_shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../img/play_icon.png") no-repeat;
+    background-size: 100%;
+    width: 270px;
+    height: 270px;
+}
+.hoverBox .info_box {
+    padding: 0 22px;
+    width: 155px;
+    float: right;
+    border: 1px solid #e5e5e5;
+    border-left: 0;
+    height: 268px;
+}
+.hoverBox .info_box .heightLimit {
+    height: 145px;
+    overflow: hidden;
+}
+.hoverBox .info_box h4 {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.hoverBox:hover h4, .hoverBox:hover .userName, .hoverBox:hover .tag {
+    color: #000;
+}
+.hoverBox .info_box .des {
+    font-size: 12px;
+    color: #a4a4a4;
+    line-height: 23px;
+    margin-top: -6px;
+    display: block;
+}
+.hoverBox .user_box {
+    overflow: hidden;
+    margin-top: 7px;
+}
+.hoverBox .img_box {
+    float: left;
+    width: 270px;
+    height: 270px;
+}
+.hoverBox .user_box img {
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+}
+.hoverBox .user_box .userName {
+    font-size: 14px;
+    margin-left: 50px;
+    line-height: 40px;
+    display: block;
+}
+.hoverBox .info_box .count {
+    font-size: 12px;
+    color: #a4a4a4;
+    margin-left: 50px;
+    display: block;
+}
+.hoverBox .info_box .count i {
+    background: url("../img/playcount.png") no-repeat;
+    display: inline-block;
+    width: 13px;
+    height: 14px;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-bottom: 3px;
+}
 /*---------------------------精品悦单---------------------------*/
 
 
@@ -743,5 +864,16 @@ input,button{
 	.index_box {
 	    width: 970px;
 	}
+}
+.contentBox .loading {
+    background: url("../img/loading.gif") no-repeat;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -24px;
+    margin-top: -24px;
+    display: none;
 }
 /*--------------------------------------------页面内容---------------------------------------------*/
