@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>tapole</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<!-----------默认样式--------------->
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body>
+		<div id="app">
+			<!----------------------------------头部导航条------------------------------------->
+			<div class="topBar">
+				<div class="container">
+					<div class="clearfix header-navbar">
+						<a href="" class="header-navbar-logo">tapole</a>
+						<ul class="clearfix hidden-xs-down header-navbar-desktop-menu">
+							<li class="fl">
+								<a href="">近视眼镜</a>
+							</li>
+							<li class="fl">
+								<a href="">近视太阳眼镜</a>
+							</li>
+							<li class="fl">
+								<a href="">预约到店</a>
+							</li>
+							<li class="fl">
+								<a href="">免费在家试戴</a>
+							</li>
+						</ul>
+						<div class="clearfix hidden-sm-up header-navbar-mobile-menu">
+
+							<div class="menu-btn">
+								<div class="clearfix main">
+									<span class="horizontal-line"></span>
+									<span class="horizontal-line"></span>
+									<span class="horizontal-line horizontal-line-last"></span>
+								</div>
+							</div>
+
+							<!-- Site Overlay -->
+							<div class="site-overlay"></div>
+
+							<!-- Pushy Menu -->
+							<div class="pushy pushy-left">
+
+								<a href="javascript:" class="close-btn">
+									<i class="cf cf-times"></i>
+								</a>
+
+								<ul>
+									<li class="pushy-link item item-portal">
+										<a class="clearfix link" href="https://www.tapole.cn">
+											<i class="fi fi-homepage"></i>
+											<span class="text">首页</span>
+										</a>
+									</li>
+
+									<li class="pushy-link item item-optical ">
+										<a class="clearfix link" href="https://www.tapole.cn/optical">
+											<i class="fi fi-glasses-opt2"></i>
+											<span class="text">近视眼镜</span>
+										</a>
+									</li>
+									<li class="pushy-link item item-sun ">
+										<a class="clearfix link" href="https://www.tapole.cn/sun">
+											<i class="fi fi-glasses-sun"></i>
+											<span class="text">近视太阳镜</span>
+										</a>
+									</li>
+									<li class="pushy-link item item-to-exp-center ">
+										<a class="clearfix link" href="https://www.tapole.cn/to-exp-center">
+											<i class="fi fi-yy"></i>
+											<span class="text">预约到店</span>
+										</a>
+									</li>
+									<li class="pushy-link item item-tryon ">
+										<a class="clearfix link" href="https://www.tapole.cn/tryon">
+											<i class="fi fi-tryon-box"></i>
+											<span class="text">免费在家试戴</span>
+										</a>
+									</li>
+
+									<div class="shown-if-authorized hide">
+										<li class="pushy-link item item-my-account">
+											<a class="clearfix link" href="https://www.tapole.cn/account">
+												<i class="fi fi-people"></i>
+												<span class="text">我的账户</span>
+											</a>
+										</li>
+										<li class="pushy-link item item-sub item-my-degree">
+											<a class="clearfix link" href="https://www.tapole.cn/account#section-degree">
+												<i class="fi fi-manage"></i>
+												<span class="text">度数管家</span>
+											</a>
+										</li>
+										<li class="pushy-link item item-sub item-my-order">
+											<a class="clearfix link" href="https://www.tapole.cn/order">
+												<i class="fi fi-order"></i>
+												<span class="text">我的订单</span>
+											</a>
+										</li>
+										<li class="item item item-sub item-my-logout">
+											<a class="clearfix link" href="https://www.tapole.cn/logout">
+												<i class="fi fi-logout-arrow-left"></i>
+												<span class="text">登出</span>
+											</a>
+										</li>
+									</div>
+									<div class="shown-if-not-authorized">
+										<li class="pushy-link item item-my-account">
+											<a class="clearfix link" href="https://www.tapole.cn/login">
+												<i class="fi fi-people"></i>
+												<span class="text">登录 Tapole 眼镜 账户</span>
+											</a>
+										</li>
+
+									</div>
+
+								</ul>
+							</div>
+
+						</div>
+						<div class="header-navbar-account">
+							<div class="hidden-xs-down header-navbar-desktop-account">
+								<div class="shown-if-not-authorized">
+									<a class="btn-account" href="https://www.tapole.cn/register">
+										登录 / 注册
+									</a>
+									&nbsp; &nbsp;
+									<a class="btn-account" href="https://www.tapole.cn/login">
+										我的账户
+									</a>
+								</div>
+							</div>
+							<div class="cart">
+								<a href="https://www.tapole.cn/cart" class="clearfix link">
+									<div class="clearfix main">
+										<div class="icon"></div>
+										<div class="text">
+											<span class="cart-quantity">0</span>
+										</div>
+									</div>
+
+									<div class="clearfix sub">购物袋</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!----------------------------------主页内容------------------------------------->
+			<div class="full-container">
+			<!------------------------轮播图--------------------------------->
+				<div class="banner-list">
+					<div class="banner_desktop_index">
+						<div class="series-section">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<a href="https://www.tapole.cn/306">
+											<div class="swiper-lazy swiper-lazy-loaded" style="background-image: url(img/1.jpg);">
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="https://www.tapole.cn/312">
+											<div class="swiper-lazy swiper-lazy-loaded" style="background-image: url('img/2.jpg');">
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="https://www.tapole.cn/310">
+											<div class="swiper-lazy swiper-lazy-loaded" style="background-image: url('img/3.jpg');">
+											</div>
+										</a>
+									</div>
+								</div>
+								<!-----------------分页器------------------->
+								<div class="pagination swiper-pagination-clickable swiper-pagination">
+									<span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+									<span class="swiper-pagination-bullet"></span>
+									<span class="swiper-pagination-bullet"></span>
+								</div>
+								<!----------------前进后退------------------->
+								<div class="swiper-button-next">
+									<i class="fi fi-line-arrow-right" aria-hidden="true"></i>
+								</div>
+								<div class="swiper-button-prev">
+									<i class="fi fi-line-arrow-left" aria-hidden="true"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="icon-list">
+					<div class="clearfix">
+						<div class="item">
+							<a href="https://www.tapole.cn/rd/op">
+								<img class="display-retina icon-item-image retina-off" src="img/7.jpg">
+							</a>
+						</div>
+						<div class="item">
+							<a href="https://www.tapole.cn/rd/yyyg">
+								<img class="display-retina icon-item-image" src="img/8.jpg">
+							</a>
+						</div>
+						<div class="item">
+							<a href="http://www.sparkawards.com/2017-spring-winners/">
+								<img class="display-retina icon-item-image" src="img/9.jpg">
+							</a>
+						</div>
+						<div class="item">
+							<a href="http://ds.tapole.cn">
+								<img class="display-retina icon-item-image" src="img/10.jpg">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!----------------------------------底部页脚------------------------------------->
+			<div class="footer">
+				<div class="clearfix footer-nav">
+					<div class="container">
+						<div class="logo">
+							<a href="https://www.tapole.cn/"></a>
+						</div>
+
+						<div class="menu">
+							<div class="row">
+								<div class="col-12 col-sm-12">
+
+									<div class="row">
+
+										<div class="col-12 col-sm-3 js-toggle-slide js-toggle-slide-mobile">
+											<div class="clearfix js-toggle-slide-head">
+												<span class="clearfix js-toggle-slide-title">
+	                                        <span class="icon icon-list_footer_help_center"></span>
+												<span class="text">
+	                                            常见疑问
+	                                        </span>
+												</span>
+												<span class="js-toggle-slide-icon">
+	                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+	                                    </span>
+											</div>
+											<ul class="js-toggle-slide-body">
+
+												<li>
+													<a href="https://www.tapole.cn/help#link-12">
+														配镜数据
+													</a>
+												</li>
+
+												<li>
+													<a href="https://www.tapole.cn/help#link-31">
+														支付配送
+													</a>
+												</li>
+
+												<li>
+													<a href="https://www.tapole.cn/help#link-38">
+														退货保障
+													</a>
+												</li>
+											</ul>
+										</div>
+
+										<div class="col-12 col-sm-3 js-toggle-slide js-toggle-slide-mobile">
+											<div class="clearfix js-toggle-slide-head">
+												<span class="clearfix js-toggle-slide-title">
+	                                        <span class="icon icon-list_footer_ex_center"></span>
+												<span class="text">
+	                                            顾问建议
+	                                        </span>
+												</span>
+												<span class="js-toggle-slide-icon">
+	                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+	                                    </span>
+											</div>
+											<ul class="js-toggle-slide-body">
+
+												<li>
+													<a href="https://www.tapole.cn/to-exp-center">
+														预约（深圳）
+													</a>
+												</li>
+
+												<li>
+													<a href="https://www.tapole.cn/app-artryon">
+														下载「AR 选眼镜」App
+													</a>
+												</li>
+
+												<li>
+													<a href="https://www.tapole.cn/help/16#我应该选择哪种镜片">
+														镜片选择
+													</a>
+												</li>
+
+												<li>
+													<a href="https://www.tapole.cn/help/18#如何挑选适合自己的镜架">
+														镜架选购
+													</a>
+												</li>
+											</ul>
+										</div>
+
+										<div class="col-12 col-sm-3 js-toggle-slide js-toggle-slide-mobile">
+											<div class="clearfix js-toggle-slide-head">
+												<span class="clearfix js-toggle-slide-title">
+	                                        <span class="icon icon-list_footer_follow_us"></span>
+												<span class="text">
+	                                            关注我们
+	                                        </span>
+												</span>
+												<span class="js-toggle-slide-icon">
+	                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+	                                    </span>
+											</div>
+											<ul class="js-toggle-slide-body">
+
+												<li>
+													<a href="https://www.tapole.cn/rd/tm">
+														天猫旗舰店
+													</a>
+												</li>
+
+												<li>
+													<a href="http://weibo.com/tapole" target="_blank">
+														新浪微博
+													</a>
+												</li>
+
+												<li>
+
+													<a href="javascript:" data-toggle="modal" data-target="#modal-tips-weixin-talk">
+														官方微信
+													</a>
+												</li>
+
+												<li>
+													<a href="javascript:" data-toggle="modal" data-target="#modal-tips-to-ceo">
+														给 CEO 写信
+													</a>
+												</li>
+											</ul>
+										</div>
+
+										<div class="col-12 col-sm-3 js-toggle-slide js-toggle-slide-mobile">
+											<div class="clearfix js-toggle-slide-head">
+												<span class="clearfix js-toggle-slide-title">
+	                                        <span class="icon icon-list_footer_about_tapole"></span>
+												<span class="text">
+	                                            关于 Tapole
+	                                        </span>
+												</span>
+												<span class="js-toggle-slide-icon">
+	                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+	                                    </span>
+											</div>
+											<ul class="js-toggle-slide-body">
+
+												<li>
+													<a href="https://www.tapole.cn/about">
+														Tapole 简介
+													</a>
+												</li>
+
+												<li>
+													<a href="https://www.tapole.cn/jobs">
+														加入 Tapole
+													</a>
+												</li>
+
+												<li>
+													<a href="https://www.tapole.cn/contact">
+														联系我们
+													</a>
+												</li>
+											</ul>
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+
+						<div class="contact">
+							<div class="tips">
+								微信电话支持：每天 9:30-20:00<br><br>线下：体验中心到店请提前预约
+							</div>
+
+							<div class="tel">
+								<a href="tel:400-885-1024">400-885-1024</a>
+							</div>
+
+							<div class="weixin">
+								<a href="javascript:" data-toggle="modal" data-target="#modal-tips-weixin-talk" class="btn btn-block btn-success">
+									<i class="fa fa-weixin" aria-hidden="true"></i> 与 Tapole 眼镜 顾问聊天
+								</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="clearfix footer-info">
+					<div class="terms">
+						<ul class="clearfix">
+							<li>
+								<a href="https://www.tapole.cn/privacy">用户隐私条款</a>
+							</li>
+							<li>
+								<a href="https://www.tapole.cn/service">网站使用条款</a>
+							</li>
+							<li>
+								<a href="https://www.tapole.cn/sell">销售服务条款</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="copyright">
+						© 2017 Tapole Co., Ltd.
+						<span class="hidden-xs-down"> All rights reserved.</span>
+						<a href="http://www.miitbeian.gov.cn/" target="_blank" class="hidden-xs-down">
+							粤ICP备 14032994 号
+						</a>
+					</div>
+				</div>
+
+				<div class="clearfix footer-declare" style="margin: 0 auto 24px auto;">
+					<span>深圳图谱人文科技有限公司</span>
+				</div>
+
+				<div class="clearfix footer-declare">
+					<small class="color-label">广告</small>
+					<span>Tapole<sup>®</sup>眼镜品牌官网包含本品牌广告</span>
+				</div>
+
+			</div>
+		</div>
+	</body>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="js/swiper-3.4.2.jquery.min.js"></script>
+	<!-------------------默认js------------------>
+	<script src="js/default.js"></script>
+	<script src="js/index.js"></script>
+
+</html>
